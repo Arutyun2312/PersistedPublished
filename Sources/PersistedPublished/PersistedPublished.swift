@@ -20,6 +20,7 @@ public extension Published where Value: Codable {
     /// Here is an example code:
     /// ```
     /// import Foundation
+    /// import PersistedPublished
     ///
     /// final class ViewModel: ObservableObject {
     ///     @Published(forKey: "acceptedRules") var acceptedRules = false
@@ -27,5 +28,21 @@ public extension Published where Value: Codable {
     /// ```
     init(forKey key: String, initialValue value: Value) {
         self.init(configuration: .default(forKey: key, initialValue: value))
+    }
+    /// Create Published that is able to persist its value in UserDefaults, using Configuration.default
+    /// - Parameters:
+    ///   - key: Key used for setting and getting in UserDefaults
+    ///
+    /// Here is an example code:
+    /// ```
+    /// import Foundation
+    /// import PersistedPublished
+    ///
+    /// final class ViewModel: ObservableObject {
+    ///     @Published(forKey: "userName") var name: String?
+    /// }
+    /// ```
+    init(forKey key: String) where Value: ExpressibleByNilLiteral {
+        self.init(configuration: .default(forKey: key, initialValue: nil))
     }
 }
