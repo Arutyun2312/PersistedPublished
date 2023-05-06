@@ -26,7 +26,7 @@ public extension Published where Value: Codable {
     ///     @Published(forKey: "acceptedRules") var acceptedRules = false
     /// }
     /// ```
-    init(forKey key: String, initialValue value: Value) {
+    init(wrappedValue value: Value, forKey key: String) {
         self.init(configuration: .default(forKey: key, initialValue: value))
     }
     /// Create Published that is able to persist its value in UserDefaults, using Configuration.default
