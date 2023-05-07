@@ -43,10 +43,10 @@ final class ViewModel: ObservableObject {
 
 >📱 iOS 13.0+, 🖥️ macOS 10.15+
 
-When using Xcode 11 or later, you can install `PersistedPublished` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL `https://github.com/weitieda/bottom-sheet`. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
+When using Xcode 11 or later, you can install `PersistedPublished` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL `https://github.com/Arutyun2312/PersistedPublished`. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
 
 When using a package, you can install `PersistedPublished` using [Swift Package Manager](https://swift.org/package-manager/), add
-`.package(name: "PersistedPublished", url: "https://github.com/weitieda/bottom-sheet", from: "1.0.0"),"` to your Package.swift, then follow the integration tutorial [here](https://swift.org/package-manager#importing-dependencies).
+`.package(name: "PersistedPublished", url: "https://github.com/Arutyun2312/PersistedPublished", from: "1.0.0"),"` to your Package.swift, then follow the integration tutorial [here](https://swift.org/package-manager#importing-dependencies).
 
 MIT License
 -----------
